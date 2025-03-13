@@ -1,17 +1,9 @@
 <?php
-# Création des constantes de connexion
-
-const DB_CONNECT_TYPE = "mysql"; // MySQL et MariaDB
-const DB_CONNECT_HOST = "localhost";
-const DB_CONNECT_PORT = 3306;
-const DB_CONNECT_NAME = "pdo_c2";
-const DB_CONNECT_CHARSET = "utf8";
-const DB_CONNECT_USER = "root";
-const DB_CONNECT_PWD = "";
+# Chargement des constantes de connexion
+require_once "config_pdo_c2.php";
 
 # Instanciation de PDO avec gestion des erreurs
 
-// essais
 try{
     // instanciation avec PDO
     $db = new PDO(
@@ -19,15 +11,25 @@ try{
         DB_CONNECT_USER,
         DB_CONNECT_PWD,
     );
-
 // si erreur, instanciation de 'Exception' avec $e comme pointeur
 }catch(Exception $e){
     // arrêt du script avec die(), et affichage de la méthode se trouvant dans l'instance de 'Exception' via $e
     die($e->getMessage());
 }
 
-
-echo "si je suis ici, c'est que la connexion a fonctionné";
-
 // déconnexion
 $db = null;
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
