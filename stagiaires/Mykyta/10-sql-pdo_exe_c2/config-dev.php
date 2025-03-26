@@ -7,3 +7,6 @@ const DB_CONNECT_NAME = "pdo_exe_c2";
 const DB_CONNECT_CHARSET = "utf8";
 const DB_CONNECT_USER = "root";
 const DB_CONNECT_PWD = "";
+
+
+const PAGE_MENU = ["querry-fetchALL", "exec"];
